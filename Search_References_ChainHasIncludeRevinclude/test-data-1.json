@@ -1,0 +1,140 @@
+
+{
+	"resourceType": "Bundle",
+	"id": "bundle-transaction",
+	"type": "transaction",
+	"entry": [
+		{
+			"resource": {
+				"resourceType": "Practitioner",
+				"id": "P1",
+				"name": [
+					{
+						"family": "Seuss"
+					}
+				]
+			},
+			"request": {
+				"method": "PUT",
+				"url": "Practitioner/P1"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Practitioner",
+				"id": "P2",
+				"name": [
+					{
+						"family": "Doolittle"
+					}
+				]
+			},
+			"request": {
+				"method": "PUT",
+				"url": "Practitioner/P2"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "HealthcareService",
+				"id": "HS1",
+				"type": {
+					"coding": [
+						{
+							"system": "http://try.smilecdr.com/lunch_and_learn",
+							"code": "Physio"
+						}
+					]
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "HealthcareService/HS1"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "HealthcareService",
+				"id": "HS2",
+				"type": {
+					"coding": [
+						{
+							"system": "http://try.smilecdr.com/lunch_and_learn",
+							"code": "Massage"
+						}
+					]
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "HealthcareService/HS2"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "HealthcareService",
+				"id": "HS3",
+				"type": {
+					"coding": [
+						{
+							"system": "http://try.smilecdr.com/lunch_and_learn",
+							"code": "Chiro"
+						}
+					]
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "HealthcareService/HS3"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "PractitionerRole",
+				"id": "PR1",
+				"practitioner": {
+					"reference": "Practitioner/P1"
+				},
+				"healthcareService": {
+					"reference": "HealthcareService/HS1"
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "PractitionerRole/PR1"
+			}
+		},
+				{
+			"resource": {
+				"resourceType": "PractitionerRole",
+				"id": "PR2",
+				"practitioner": {
+					"reference": "Practitioner/P1"
+				},
+				"healthcareService": {
+					"reference": "HealthcareService/HS2"
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "PractitionerRole/PR2"
+			}
+		},
+				{
+			"resource": {
+				"resourceType": "PractitionerRole",
+				"id": "PR3",
+				"practitioner": {
+					"reference": "Practitioner/P2"
+				},
+				"healthcareService": {
+					"reference": "HealthcareService/HS1"
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "PractitionerRole/PR3"
+			}
+		}
+	]
+}
