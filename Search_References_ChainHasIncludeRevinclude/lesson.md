@@ -8,7 +8,7 @@ Often times you’ll come across a scenario where you want to fetch not only one
 
 For this topic, we will work with Specimen, Patient, and Organization resources. When reading through the query examples, refer to this diagram
 
-![Diagram](graph.png)
+![Diagram](/examples/Search_References_ChainHasIncludeRevinclude/graph.png)
 
 ## Single-Reference Queries
 
