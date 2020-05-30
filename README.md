@@ -9,3 +9,7 @@ This is the home of the FHIR Tutorial, an open collaborative effort to develop a
 Note: These are not being created in their final order, so they are not (yet) intended to be read sequentially.
 
 * [Search / References / Chain, _has, _include, _revinclude](Search_References_ChainHasIncludeRevinclude/lesson.md)
+
+* [FHIRPath](FHIRPath/lesson.md)
+
+* [Transactions](Transactions/lesson.md)
