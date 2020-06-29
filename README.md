@@ -13,3 +13,5 @@ Note: These are not being created in their final order, so they are not (yet) in
 * [FHIRPath](FHIRPath/lesson.md)
 
 * [Transactions](Transactions/lesson.md)
+
+* [CRUD Operations](CRUD%20operations/lesson.md)
