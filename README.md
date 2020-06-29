@@ -16,4 +16,4 @@ Note: These are not being created in their final order, so they are not (yet) in
 
 * [REST CRUD operations - Create, Read, Update, Delete](CRUD%20operations/lesson.md)
 
-* [SearchParameter](SearchParameter/lesson.md)
+* [Search Parameter Types](SearchParameter/lesson.md)
