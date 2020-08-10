@@ -1,0 +1,44 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hapi.fhir.org/baseR4/StructureDefinition/PatientProfile",
+    "name": "PatientProfile",
+    "status": "active",
+    "kind": "resource",
+    "abstract": false,
+    "derivation": "specialization",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+    "type": "Patient",
+    "differential": {
+       "element": [
+          {
+             "min": 0,
+             "max": "2",
+             "id": "Patient.extension",
+             "path": "Patient.extension",
+             "definition": "Optional Extension Element - found in all resources.",
+             "slicing": {
+                "discriminator": [
+                   {
+                      "type": "type",
+                      "path": "$this"
+                   }
+                ],
+                "rules": "open",
+                "ordered": false
+             }
+          },
+          {
+             "min": 1,
+             "max": "1",
+             "id": "Patient.extension.value[x]:BirthPlaceSlice",
+             "path": "Patient.extension.value[x]",
+             "sliceName": "BirthPlaceSlice",
+             "type": [
+                {
+                   "code": "string"
+                }
+             ]
+          }
+       ]
+    }
+ }
