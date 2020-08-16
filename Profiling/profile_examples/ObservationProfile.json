@@ -1,0 +1,66 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hapi.fhir.org/baseR4/StructureDefinition/DiabetesObservationProfile",
+    "name": "DiabetesObservationProfile",
+    "status": "active",
+    "kind": "resource",
+    "abstract": false,
+    "derivation": "specialization",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "type": "Observation",
+    "differential": {
+       "element": [
+          {
+             "min": 0,
+             "max": "3",
+             "id": "Observation.category",
+             "path": "Observation.category",
+             "definition": "A code that classifies the general type of observation being made.",
+             "slicing": {
+                "discriminator": [
+                   {
+                      "type": "pattern",
+                      "path": "coding"
+                   },
+                   {
+                      "type": "pattern",
+                      "path": "coding"
+                   }
+                ],
+                "rules": "open",
+                "ordered": false
+             }
+          },
+          {
+             "min": 0,
+             "max": "1",
+             "id": "Observation.category:Systolic",
+             "path": "Observation.category",
+             "sliceName": "Systolic",
+             "patternCodeableConcept": {
+                "coding": [
+                   {
+                    "code": "8480-6",
+                    "display": "Systolic"
+                   }
+                ]
+             }
+          },
+          {
+             "min": 0,
+             "max": "1",
+             "id": "Observation.category:Diastolic",
+             "path": "Observation.category",
+             "sliceName": "Diastolic",
+             "patternCodeableConcept": {
+                "coding": [
+                   {
+                      "code": "8462-4",
+                      "display": "Diastolic"
+                   }
+                ]
+             }
+          }
+       ]
+    }
+ }

@@ -1,0 +1,42 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hapi.fhir.org/baseR4/StructureDefinition/PractitionerProfile",
+    "name": "PractitionerProfile",
+    "status": "active",
+    "kind": "resource",
+    "abstract": false,
+    "derivation": "specialization",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+    "type": "Practitioner",
+    "differential": {
+       "element": [
+          {
+             "min": 1,
+             "max": "3",
+             "id": "Practitioner.telecom",
+             "path": "Practitioner.telecom",
+             "definition": "A contact detail for the practitioner, e.g. a telephone number or an email address.",
+             "slicing": {
+                "discriminator": [
+                   {
+                      "type": "value",
+                      "path": "use"
+                   }
+                ],
+                "rules": "open",
+                "ordered": false
+             }
+          },
+          {
+             "min": 1,
+             "max": "1",
+             "id": "Practitioner.telecom:practitioner_home_phone",
+             "path": "Practitioner.telecom",
+             "sliceName": "practitioner_home_phone",
+             "fixedContactPoint": {
+                "use": "home"
+             }
+          }
+       ]
+    }
+ }
