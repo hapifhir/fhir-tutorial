@@ -19,3 +19,5 @@ Note: These are not being created in their final order, so they are not (yet) in
 * [Search Parameter Types](SearchParameter/lesson.md)
 
 * [Profiling](Profiling/lesson.md)
+
+* [Terminology - CodeSystem & ValueSet](Terminology/CodeSystem_and_ValueSet/lesson.md)
