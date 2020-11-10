@@ -163,3 +163,41 @@ Operation returns an outcome which includes one of the following codes:
 | codingA          | coding          | The "A" Coding that is to be tested. |
 | codingB          | coding          | The "B" Coding that is to be tested. |
 
+# ValueSet
+
+![ValueSet](./img/ValueSet.svg)
+
+## Two Aspects of a ValueSet
+
+* compose - A definition of which codes are intended to be in the value set (“intension”).
+* expansion - The list of codes that are actually in the value set under a given set of conditions (“extension”).
+
+## Binding Strengths
+
+**required** - To be conformant, the concept in this element SHALL be from the specified value set.
+
+**extensible** - To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated. If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.
+
+**preferred** - Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.
+
+**example** - Instances are not expected or even encouraged to draw from the specified value set. The value set merely provides examples of the types of concepts intended to be included.
+
+## ValueSet Operation: $expand
+
+Follow the composition rules in the ValueSet and return the complete set.
+
+Example:
+
+https://try.smilecdr.com:8000/baseR4/CodeSystem?url=http://hl7.org/fhir/administrative-gender
+
+https://try.smilecdr.com:8000/baseR4/ValueSet?url=http://hl7.org/fhir/ValueSet/administrative-gender
+
+https://try.smilecdr.com:8000/baseR4/ValueSet/$expand?url=http://hl7.org/fhir/ValueSet/administrative-gender
+
+## ValueSet Operation: $validate-code
+
+Validate that a coded value is in the set of codes allowed by a value set.
+
+Example:
+
+https://try.smilecdr.com:8000/baseR4/ValueSet/$validate-code?url=http://hl7.org/fhir/ValueSet/administrative-gender&system=http://hl7.org/fhir/administrative-gender&code=female
