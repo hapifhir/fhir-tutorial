@@ -165,7 +165,14 @@ Operation returns an outcome which includes one of the following codes:
 
 # ValueSet
 
+Where a code system is a list of codes defined by some authority, a value set is a list of codes for a specific purpose.
+
+A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context.
+
+This list can be include all of the codes from a given code system, only some of the codes from a given code system, and even codes from multiple code systems as illustrated in the diagram below.
+
 ![ValueSet](./img/ValueSet.svg)
+
 
 ## Two Aspects of a ValueSet
 
