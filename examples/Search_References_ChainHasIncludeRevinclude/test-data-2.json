@@ -1,165 +1,174 @@
 {
 	"resourceType": "Bundle",
-	"id": "bundle-transaction",
 	"type": "transaction",
 	"entry": [
-		{
-			"resource": {
-				"resourceType": "Organization",
-				"id": "OR1"
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Organization/OR1"
+	  {
+		"resource": {
+		  "resourceType": "Patient",
+		  "id": "PA1",
+		  "address": [
+			{
+			  "city": "Toronto",
+			  "state": "ON",
+			  "country": "Canada"
 			}
+		  ],
+		  "managingOrganization": {
+			"reference": "Organization/OR1"
+		  }
 		},
-		{
-			"resource": {
-				"resourceType": "Organization",
-				"id": "OR2"
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Organization/OR2"
-			}
-		},
-		{
-			"resource": {
-				"resourceType": "Patient",
-				"id": "PA1",
-				"managingOrganization": {
-   				 "reference": "Organization/OR1"
- 				 },
-				"address": [
-					{
-						"city": "Toronto"
-					}
-				]
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Patient/PA1"
-			}
-		},
-		{
-			"resource": {
-				"resourceType": "Patient",
-				"id": "PA2",
-				"managingOrganization": {
-   				 "reference": "Organization/OR1"
- 				 },
-				"address": [
-					{
-						"city": "Kingston"
-					}
-				]
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Patient/PA2"
-			}
-		},
-		{
-			"resource": {
-				"resourceType": "Patient",
-				"id": "PA3",
-				"managingOrganization": {
-   				 "reference": "Organization/OR2"
- 				 },
-				"address": [
-					{
-						"city": "Guelph"
-					}
-				]
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Patient/PA3"
-			}
-		},
-		{
-			"resource": {
-				"resourceType": "Specimen",
-				"id": "SP1",
-			  "subject": {
-    			"reference": "Patient/PA1"
-				},
-				"type": {
-					"coding": [
-						{
-							"system": "http://try.smilecdr.com/lunch_and_learn",
-							"code": "hair"
-						}
-					]
-				}
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Specimen/SP1"
-			}
-		},
-				{
-			"resource": {
-				"resourceType": "Specimen",
-				"id": "SP2",
-			  "subject": {
-    			"reference": "Patient/PA1"
-				},
-				"type": {
-					"coding": [
-						{
-							"system": "http://try.smilecdr.com/lunch_and_learn",
-							"code": "blood"
-						}
-					]
-				}
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Specimen/SP2"
-			}
-		},
-		{
-			"resource": {
-				"resourceType": "Specimen",
-				"id": "SP3",
-			  "subject": {
-    			"reference": "Patient/PA2"
-				},
-				"type": {
-					"coding": [
-						{
-							"system": "http://try.smilecdr.com/lunch_and_learn",
-							"code": "skin"
-						}
-					]
-				}
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Specimen/SP3"
-			}
-		},
-		{
-			"resource": {
-				"resourceType": "Specimen",
-				"id": "SP4",
-			  "subject": {
-    			"reference": "Patient/PA3"
-				},
-				"type": {
-					"coding": [
-						{
-							"system": "http://try.smilecdr.com/lunch_and_learn",
-							"code": "skin"
-						}
-					]
-				}
-			},
-			"request": {
-				"method": "PUT",
-				"url": "Specimen/SP4"
-			}
+		"request": {
+		  "method": "PUT",
+		  "url": "Patient/PA1"
 		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Patient",
+		  "id": "PA2",
+		  "address": [
+			{
+			  "city": "Kingston",
+			  "state": "ON",
+			  "country": "Canada"
+			}
+		  ],
+		  "managingOrganization": {
+			"reference": "Organization/OR1"
+		  }
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Patient/PA2"
+		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Patient",
+		  "id": "PA3",
+		  "address": [
+			{
+			  "city": "Guelph",
+			  "state": "ON",
+			  "country": "Canada"
+			}
+		  ],
+		  "managingOrganization": {
+			"reference": "Organization/OR2"
+		  }
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Patient/PA3"
+		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Organization",
+		  "id": "OR1"
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Organization/OR1"
+		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Organization",
+		  "id": "OR2"
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Organization/OR2"
+		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Specimen",
+		  "id": "SP1",
+		  "subject": {
+			"reference": "Patient/PA1"
+		  },
+		  "type": {
+			"coding": [
+			  {
+				"system": "http://snomed.info/sct",
+				"code": "386045008",
+				"display": "Hair structure (body structure)"
+			  }
+			]
+		  }
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Specimen/SP1"
+		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Specimen",
+		  "id": "SP2",
+		  "subject": {
+			"reference": "Patient/PA1"
+		  },
+		  "type": {
+			"coding": [
+			  {
+				"system": "http://snomed.info/sct",
+				"code": "87612001",
+				"display": "Blood (substance)"
+			  }
+			]
+		  }
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Specimen/SP2"
+		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Specimen",
+		  "id": "SP3",
+		  "subject": {
+			"reference": "Patient/PA2"
+		  },
+		  "type": {
+			"coding": [
+			  {
+				"system": "http://snomed.info/sct",
+				"code": "39937001",
+				"display": "Skin structure (body structure)"
+			  }
+			]
+		  }
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Specimen/SP3"
+		}
+	  },
+	  {
+		"resource": {
+		  "resourceType": "Specimen",
+		  "id": "SP4",
+		  "subject": {
+			"reference": "Patient/PA3"
+		  },
+		  "type": {
+			"coding": [
+			  {
+				"system": "http://snomed.info/sct",
+				"code": "39937001",
+				"display": "Skin structure (body structure)"
+			  }
+			]
+		  }
+		},
+		"request": {
+		  "method": "PUT",
+		  "url": "Specimen/SP4"
+		}
+	  }
 	]
-}
+  }

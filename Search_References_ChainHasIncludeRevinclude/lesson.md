@@ -4,7 +4,9 @@
 
 Often times you’ll come across a scenario where you want to fetch not only one Resource, but Resources related to the core resource you’re working with. With FHIR, it’s possible to collect multiple resources in one call, potentially saving computational time. In this lesson, we’ll be going over the basics of chaining, “_has”, “_include” & “_revinclude”. We’ll start by describing how to use these for single relationships, and then describe how they work with nested relationships.
 
-For this topic, we will work with Specimen, Patient, and Organization resources. When reading through the query examples, refer to this diagram
+If you want to try these queries on your FHIR server, attached is a [bundle](/examples/Search_References_ChainHasIncludeRevinclude/test-data-2.json) with sample test data to experiment with.
+
+For this topic, we will work with Specimen, Patient, and Organization resources. When reading through the query examples, refer to this diagram:
 
 ![Diagram](images/graph.png)
 
@@ -115,7 +117,7 @@ You can also _include resources that are more than one reference away from your 
 ```
 
 
-Here, we request Specimen SP1 and ask to include its Patient as well as that Patient’s Organization.  Note the “:iterate” after the second include.  This means also look inside other _included resources for the thing I’m asking for.  For DSTU3, :recurse is used instead of :iterate.
+Here, we request Specimen SP1 and ask to include its Patient as well as that Patient’s Organization.  Note the “:iterate” after the second include.  This means also look inside other _included resources for the thing I’m asking for.  For STU3, :recurse is used instead of :iterate.
 
 The expected results are: SP1, PA1, OR1
 
@@ -137,8 +139,13 @@ Here, we are requesting Organization OR1 along with all Patients that reference 
 The expected results are: OR1, PA1, PA2, SP1, SP2, SP3
 
 
-## 
+##
 
+The key takeway from all these queries is not just how to retrieve multiple resources at once, but their relationship to one another. That relationship helps dictate the type of queries you'll need to make to collect your data.
+
+![Relationship_Diagram](/examples/Search_References_ChainHasIncludeRevinclude/FHIR_Tutorial_Series_FHIR_Search_References_Flow.svg)
+
+##
 
 ## Exercise
 
@@ -174,7 +181,7 @@ Expected response: SP1, PA1, OR1
 
 Find an Organization with ID OR1, and include all Patients 
 
-DSTU3
+STU3
 
 
 ```url
