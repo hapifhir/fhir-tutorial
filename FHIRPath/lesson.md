@@ -29,6 +29,7 @@ FHIRPath can be used for navigating through resources. Consider the following Pa
               "value": "(1) 226 791 5555",
               "system": "phone"
             }
+        ]
     }
 ```
 To use FHIRPath to list the Patient's given names, the query would look like this: 
